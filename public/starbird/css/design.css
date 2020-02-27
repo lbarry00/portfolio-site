@@ -1,0 +1,117 @@
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 200%;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 130%;
+  width: 40%;
+  display: inline-block;
+}
+
+.bg-image {
+  background-image: url("../img/game-screenshot.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+  margin: 0;
+  border: 0;
+}
+
+.center-text{
+  position: relative;
+  left: -25px;
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  position: relative;
+  left: 30px;
+  top: -5px;
+  width: 75px;
+  height: 75px;
+  display: inline;
+  float: left;
+}
+
+.navbar{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 20px;
+  list-style-type: none;
+  margin: 0px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F9519A;
+  position: sticky;
+  top: 0;
+}
+
+.navbar li{
+  float: left;
+  border-right:3px solid rgb(255, 255, 255);
+
+}
+
+.navbar li a{
+  display: inline-block;
+  color: #270986;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.navbar li:last-child {
+  border-right: none;
+}
+
+.navbar li a:hover:not(.active) {
+  color: #D9C2C2;
+}
+
+.active {
+    background-color: #9740F9;
+  }
+
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 50%;
+  height: 45%;
+  align-self: center;
+  background-color: rgba(255, 255, 255, .8);
+  height: 50%;
+  align-self: center;
+  background-color: white;
+  padding: 30px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.bg-image {
+  background-image: url("../img/flat.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+  margin: 0 -10;
+  border: 0;
+}

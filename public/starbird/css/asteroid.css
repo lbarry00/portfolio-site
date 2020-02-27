@@ -1,0 +1,17 @@
+.asteroid {
+  z-index: 4;
+  position: fixed;
+  margin: 0px;
+  animation-name: asteroid;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes asteroid{
+  0%{
+    transform: translate3d(110vw, 0, 0);
+  }
+  100%{
+    transform: translate3d(-10vw, 0, 0);
+  }
+}

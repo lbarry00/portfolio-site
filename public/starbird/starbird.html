@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/asteroid.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|ZCOOL+QingKe+HuangYou" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/jquery-collision.min.js"></script>
+  <title>Space Bird</title>
+</head>
+
+<body>
+
+  <iframe src="music/Blob-Monsters-Return.mp3" autoplay="true" hidden="true" ></iframe> <!-- Abuse iframe for autoplay in chrome -->
+
+  <div class="header center-text">
+    <h1> <img src="img/sb_logo_alt3.gif" class="logo" style="height:60px; width:auto;">
+    <img src="img/title.png">
+    </h1>
+  </div>
+
+  <ul class="navbar">
+    <li><a class="active" href="starbird.html">Game</a></li>
+    <li><a href="design.html">About</a></li>
+    <li><a href="resources.html">Resources</a></li>
+  </ul>
+
+
+  <div id="gameContainer"> <!-- Use this to hold the game screen and control position-->
+
+    <div class="sliding-bg"> <!-- Container for the parallax game background stuff. -->
+      <div class="sliding-galaxy"></div>
+    </div>
+
+    <div class="gameoverscreen"> <!-- Container for our game over screen elements -->
+        <span id="gameover">
+            <h1 class='gameover'>Game Over!</h1>
+            <a href='starbird.html' class='playagain'>Reload to play again.</a>
+        </span>
+    </div>
+
+  </div>
+
+
+</body>
+<script src="js/asteroid.js"></script>
+<script src="js/bird.js"></script>
+</html>

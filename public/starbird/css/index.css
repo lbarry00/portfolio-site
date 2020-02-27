@@ -1,0 +1,173 @@
+/* General page formatting stuff */
+
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 200%;
+}
+
+.logo {
+  position: relative;
+  left: 30px;
+  top: -5px;
+  display: inline;
+}
+
+.center-text{
+  position: relative;
+  left: -25px;
+  width: 100%;
+  text-align: center;
+}
+ /* Navigation Settings */
+ 
+.navbar{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 20px;
+  list-style-type: none;
+  margin: 0px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F9519A;
+  position: sticky;
+  top: 0;
+}
+
+.navbar li{
+  float: left;
+  border-right:3px solid rgb(255, 255, 255);
+}
+
+.navbar li a{
+  display: inline-block;
+  color: #270986;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.navbar li:last-child {
+  border-right: none;
+}
+
+.navbar li a:hover:not(.active) {
+  color: #D9C2C2;
+}
+
+.active {
+  background-color: #9740F9;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Game formatting stuff */
+
+#gameContainer {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 600px; /* Size of verticle dimension of the background image. inherit width from body (edge of screen).*/
+  border-bottom: 10px solid #F9519A;
+}
+
+.sliding-bg {
+  z-index: 1;
+  background: url("../img/main_bg.png") repeat-x;
+  height: 100%;
+  width:  9090px;
+  animation: slide-bg 60s linear infinite;
+}
+
+@keyframes slide-bg{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-3030px, 0, 0);
+  }
+}
+
+.sliding-galaxy {
+  z-index: 2;
+  margin: 0;
+  background: url("../img/galaxy_layer.png") repeat-x;
+  height: 100%;
+  width: 100%;
+  animation: slide-galaxy 60s linear infinite;
+}
+
+@keyframes slide-galaxy{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-3030px, 0, 0);
+  }
+}
+
+.bird {
+  z-index: 3;
+  position: fixed;
+  top: 20em;
+  left: 10em;
+}
+
+.gameoverscreen {
+    overflow: hidden;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#gameover {
+    position: absolute;
+    top: 30%;
+}
+
+.gameover {
+    z-index: 9;
+    position: relative;
+    color: white;
+    text-shadow: 3px 7px black;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+}
+
+.playagain {
+    z-index: 9;
+    color: white;
+    position: relative;
+    text-shadow: 1px 3px black;
+    text-align: center;
+    text-decoration: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    margin: auto;
+    font-size: 1.3em;
+}

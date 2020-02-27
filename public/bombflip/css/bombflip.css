@@ -1,0 +1,210 @@
+body {
+  background-color: #80dfff;
+  font-family: Courier;
+  text-align: center; }
+
+a:link {
+  color: #102E99; }
+
+a:visited {
+  color: #102E99; }
+
+a:active {
+  color: #ffffff; }
+
+a:hover, a:visited:hover {
+  color: #ffffff; }
+
+.main-wrapper {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  /*it can be fixed too*/
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  display: inline-block; }
+
+.content {
+  display: inline;
+  vertical-align: middle;
+  text-align: center; }
+
+.main-wrapper h1 {
+  font-size: 48px; }
+
+.main-wrapper h2 {
+  font-size: 22px; }
+
+.buttons {
+  display: inline-block; }
+
+.play-button {
+  border: 5px dashed white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px; }
+
+.how-to-button {
+  margin-top: 20px;
+  border: 5px dashed white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px; }
+
+.main-gameboard {
+  text-align: center; }
+
+a:link {
+  color: #102E99; }
+
+a:visited {
+  color: #102E99; }
+
+a:active {
+  color: #ffffff; }
+
+a:hover, a:visited:hover {
+  color: #ffffff; }
+
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+tr {
+  height: 80%; }
+
+td {
+  border: 2px solid black;
+  padding: 0px;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  background-color: white; }
+  td.bottom-empty {
+    background-color: transparent;
+    border-width: 0px; }
+
+td p {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold; }
+
+.bombs {
+  padding-left: 10px; }
+
+td img {
+  padding: 5px;
+  width: 120px;
+  height: 120px;
+  height: 90;
+  vertical-align: middle; }
+
+.right-info img {
+  height: 50px;
+  width: 50px; }
+
+.bottom-info img {
+  height: 50px;
+  width: 50px; }
+
+hr {
+  border: 0px;
+  color: black;
+  background-color: black;
+  height: 2px;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px; }
+
+body {
+  text-align: center;
+  font-family: Courier; }
+
+body {
+  background-color: #80dfff;
+  font-family: Courier;
+  text-align: center; }
+
+a:link {
+  color: #102E99; }
+
+a:visited {
+  color: #102E99; }
+
+a:active {
+  color: #ffffff; }
+
+a:hover, a:visited:hover {
+  color: #ffffff; }
+
+.divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40%; }
+
+.main-wrapper {
+  position: absolute;
+  /*it can be fixed too*/
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  display: inline-block;
+  text-align: center; }
+
+.game-board {
+  width: 50%;
+  display: inline-block;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.bold {
+  font-weight: bold; }
+
+.info-square {
+  width: 50%;
+  display: inline-block;
+  height: 50%;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.info-square-text {
+  display: inline; }
+
+.info-square-img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black; }
+
+.game-board-img {
+  width: 80%;
+  height: 80%; }
+
+.scoring {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 150px;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px; }

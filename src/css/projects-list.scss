@@ -1,7 +1,7 @@
 .projects-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -50,8 +50,11 @@
     margin: 0.5vh;
   }
 
+  .project-blurb {
+    flex-grow: 1;
+  }
+
   @mixin project-status {
-    margin: none;
     padding: 1vh;
     width: 15vh;
     text-align: center;

@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const port = 5000;
-
 console.log("Starting up server...")
 
 // setup static paths

@@ -20,13 +20,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-  }
 
-  a {
-    color: white;
+    h3 {
+      flex-grow: 1;
+    }
 
-    &:hover {
-      color: #4DCCFF;
+    a {
+      color: white;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      &:hover {
+        color: #4DCCFF;
+      }
     }
   }
 
@@ -64,7 +70,7 @@
 
   .active {
     @include project-status;
-    background-color: #3EC245;
+    background-color: #04B630;
   }
 
   .completed {

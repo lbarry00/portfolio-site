@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-console.log("Starting up server...")
+console.log("Starting up express server...")
 
 // setup static paths
 app.use(express.static(path.join(__dirname, "build")));

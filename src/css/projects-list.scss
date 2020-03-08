@@ -6,14 +6,16 @@
 }
 
 .project-card {
-  background-color: #0092CC;
   margin: 2vh;
   padding: 2vh;
   max-width: 40vh;
   flex: 1;
   display: flex;
   flex-direction: column;
-  box-shadow: 1vh 1vh;
+
+  a {
+    padding: 1vh;
+  }
 
   .project-title-repo {
     display: flex;
@@ -23,16 +25,6 @@
 
     h3 {
       flex-grow: 1;
-    }
-
-    a {
-      color: white;
-      margin-left: 10px;
-      margin-right: 10px;
-
-      &:hover {
-        color: #4DCCFF;
-      }
     }
   }
 
@@ -50,9 +42,6 @@
 
   li { // technologies used, items
     list-style-type: none;
-    padding: 1vh;
-    background-color: #00B7FF;
-    border: 2px solid black;
     margin: 0.5vh;
   }
 
@@ -62,19 +51,21 @@
 
   @mixin project-status {
     padding: 1vh;
+    padding-top: 1.2vh;
     width: 15vh;
     text-align: center;
-    border: 2px solid black;
     align-self: flex-end;
   }
 
   .active {
     @include project-status;
-    background-color: #04B630;
+    background-color: $green;
+    color: $blue;
   }
 
   .completed {
     @include project-status;
-    background-color: #548056;
+    background-color: $blue;
+    color: $gray;
   }
 }

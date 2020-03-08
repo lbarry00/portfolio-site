@@ -40,7 +40,7 @@ class ProjectCard extends Component {
     }
 
     return (
-      <div className="project-card">
+      <div className="project-card panel">
         <div className="project-title-repo">
           <h3>{project.name}</h3>
           {demoComp}

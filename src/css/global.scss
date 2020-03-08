@@ -1,0 +1,75 @@
+
+body {
+  margin: 1%;
+  background-color: $color_background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Aaargh, sans-serif;
+  font-weight: bold;
+  color: $color_text;
+}
+
+@font-face {
+  font-family: Aaargh;
+  src: url(Aaargh.ttf);
+}
+
+.panel {
+  padding: 20px 50px;
+  background-color: $color_panel_background;
+  border: 5px solid $color_panel_border;
+  margin-bottom: 1vh;
+}
+
+.name {
+  display: block;
+  padding: 20px 50px;
+  h1 {
+    text-transform: uppercase;
+    word-spacing: 1vh;
+    margin: 0 0 10px 0;
+    .firstlast {
+      font-size: 4vh;
+      display: inline-block;
+      align-items: baseline;
+      letter-spacing: .4em;
+      &:first-letter {
+        display: inline;
+        font-size: 5vh;
+      }
+    }
+  }
+  p {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  .links {
+    display: block;
+    text-align: center;
+    margin: 0;
+    a {
+      font-size: 3vh;
+      display: inline-block;
+      padding: 0 3vh;
+      margin: 0;
+    }
+  }
+}
+
+
+.jump-to-top {
+  margin-top: 5vh;
+  color: $color_link;
+}
+
+a {
+  text-decoration: none;
+  color: $color_link;
+  &:hover {
+    text-decoration: underline;
+    color: $color_hover;
+  }
+}

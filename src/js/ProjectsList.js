@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ReactLoading from 'react-loading';
+
 import ProjectCard from "./ProjectCard";
 
 var Airtable = require("airtable");
@@ -41,11 +43,20 @@ class ProjectsList extends Component {
 
   render() {
     const projectsList = this.state.projects;
+    let projComponent;
 
-    // create a ProjectCard for each project
-    const projComponent = projectsList.map((project) =>
-        <ProjectCard project={project} key={project.name}/>
-      );
+    // Implement loading animation if projects list hasn't been loaded from Airtable yet
+    if (projectsList.length === 0) {
+      projComponent = <ReactLoading type={"bars"} className="loading" />;
+    } else {
+      // create a ProjectCard for each project
+      projComponent = projectsList.map((project) =>
+          <ProjectCard project={project} key={project.name}/>
+        );
+    }
+
+
+
 
     return(
       <div className="projects-list">

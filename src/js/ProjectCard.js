@@ -28,19 +28,26 @@ class ProjectCard extends Component {
       } else {
         demoComp = null;
       }
-    } catch(error) { // render a simple error instead
+    } catch(error) {
+      // accounts for an extra, blank row in Airtable, don't need to do anything
+      if (project.name == null) {
+        return(null);
+      }
+
+      // there's actually some missing data, render a simple error message
       return(
-        <div className="project-card">
-          <h3>Error occurred while retrieving project data.</h3>
+        <div className="project-card panel error">
+          <h3>An Error occurred while retrieving project data.</h3>
           <details style={{ whiteSpace: "pre-wrap" }}>
-            {error.toString()}
+            <summary>Error Details</summary>
+            <p>{error.toString()}</p>
           </details>
         </div>
       )
     }
 
     return (
-      <div className="project-card panel">
+      <div className="project-card panel" key={project.name}>
         <div className="project-title-repo">
           <h3>{project.name}</h3>
           {demoComp}

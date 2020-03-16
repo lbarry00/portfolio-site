@@ -59,7 +59,6 @@ body {
   }
 }
 
-
 .jump-to-top {
   margin-top: 5vh;
   color: $color_link;
@@ -71,5 +70,23 @@ a {
   &:hover {
     text-decoration: underline;
     color: $color_hover;
+  }
+}
+
+.error {
+  h3 {
+    font-style: italic;
+  }
+
+  details {
+    summary {
+      background-color: white;
+    }
+
+    p {
+      padding: 20px;
+      background-color: white - 30;
+      max-height: 100%;
+    }
   }
 }

@@ -4,14 +4,15 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
-    "airtable": "^0.8.1",
+    "airtable": "^0.11.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.2",
-    "pm2": "^4.2.3",
+    "pm2": "^5.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-loading": "^2.0.3",
-    "react-scripts": "3.4.0"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "pm2 start server.js",
@@ -39,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^6.0.1",
     "sass-loader": "^8.0.2"
   }
 }

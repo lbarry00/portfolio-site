@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Projects from "./js/Projects"
+import Main from "./js/Main"
 
 import "./css/index.scss";
 
 ReactDOM.render(
-  <Projects/>,
-  document.getElementById("projects-root")
+  <Main/>,
+  document.getElementById("page-root")
 )

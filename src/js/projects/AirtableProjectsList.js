@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 var Airtable = require("airtable");
 
-class ProjectsList extends Component {
+class AirtableProjectsList extends Component {
   constructor(props) {
     super(props);
 
@@ -55,9 +55,6 @@ class ProjectsList extends Component {
         );
     }
 
-
-
-
     return(
       <div className="projects-list">
         {projComponent}
@@ -66,4 +63,4 @@ class ProjectsList extends Component {
   }
 }
 
-export default ProjectsList;
+export default AirtableProjectsList;

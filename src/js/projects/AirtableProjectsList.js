@@ -48,18 +48,30 @@ class AirtableProjectsList extends Component {
     // Implement loading animation if projects list hasn't been loaded from Airtable yet
     if (projectsList.length === 0) {
       projComponent = <ReactLoading type={"bars"} className="loading" />;
+
+      return(
+        <div id="projects-loading">
+          {projComponent}
+        </div>
+      )
     } else {
       // create a ProjectCard for each project
       projComponent = projectsList.map((project) =>
           <ProjectCard project={project} key={project.name}/>
         );
-    }
 
-    return(
-      <div className="projects-list">
-        {projComponent}
-      </div>
-    );
+      return(
+        <div id="projects-page">
+          <div class="sticky-title">
+                <h2>Projects</h2>
+            </div>
+          <div className="projects-list">
+            {projComponent}
+          </div>
+        </div>
+        
+      );
+    }
   }
 }
 

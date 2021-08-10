@@ -2,20 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 html {
-  margin: 1%;
-  background-color: $color_background;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  background-color: $background_darkestgrey;
   font-family: 'Roboto', sans-serif;
-  color: $color_text;
+  color: $foreground_lightgrey;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin: 5vh;
+  width: 100vw;
+}
+
+#page-content {
+  margin: 5vw;
 }
 
 .panel {
   padding: 20px 50px;
-  background-color: $color_panel_background;
-  border: 5px solid $color_panel_border;
+  background-color: $background_darkergrey;
+  border-radius: 50px;
+  box-shadow: 2vh 2vh black;
   margin-bottom: 1vh;
 }
 
@@ -26,7 +38,7 @@ html {
 
 a {
   text-decoration: none;
-  color: $color_link;
+  color: $accent_green;
   &:hover {
     text-decoration: underline;
     color: $color_hover;
@@ -34,18 +46,20 @@ a {
 }
 
 .error {
+  border: 5px solid $accent_darkred;
+
   h3 {
     font-style: italic;
+    color: $foreground_lightgrey;
+    text-shadow: 2px 2px 5px black;
   }
 
   details {
-    summary {
-      background-color: white;
-    }
-
+    padding: 1vh;
+    background-color: $background_darkgrey
     p {
       padding: 20px;
-      background-color: white - 30;
+      background-color: $background_darkgrey;
       max-height: 100%;
     }
   }

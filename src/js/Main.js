@@ -13,14 +13,17 @@ class Main extends Component {
         return (
             <HashRouter>
                 <div>
-                    <nav>
-                        <ul>
-                            <li><NavLink exact to="/">Home</NavLink></li>
-                            <li><NavLink to="/about">About</NavLink></li>
-                            <li><NavLink to="/projects">Projects</NavLink></li>
-                        </ul>
-                    </nav>
-                    <div>
+                    <div id="titlebar">
+                        <h1><a>LAUREN BARRY</a></h1>
+                        <nav>
+                            <ul>
+                                <li><NavLink exact to="/">HOME</NavLink></li>
+                                <li><NavLink to="/about">ABOUT</NavLink></li>
+                                <li><NavLink to="/projects">PROJECTS</NavLink></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="page-content">
                         <Route exact path="/" component={HomePage} />
                         <Route path="/projects" component={ProjectsPage} />
                     </div>

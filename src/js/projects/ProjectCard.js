@@ -3,13 +3,12 @@ import React, { Component } from "react";
 class ProjectCard extends Component {
 
   render() {
-    let project, techList, techComp, projectStatus, imageComp, demoComp;
+    let project, techList, techComp, imageComp, demoComp;
 
     // check for null, means something went wrong with retrieving the data
     // (most likely the record on Airtable is incomplete)
     try {
       project = this.props.project;
-      projectStatus = project.status.toLowerCase();
       techList = project.tech.split(","); //convert from csv to array with a list of technologies used for the projects
       techComp = techList.map((tech) =>
         <li id={tech} key={tech}>{tech}</li>
@@ -37,9 +36,9 @@ class ProjectCard extends Component {
       // there's actually some missing data, render a simple error message
       return(
         <div className="project-card panel error">
-          <h3>An Error occurred while retrieving project data.</h3>
+          <h3>An error occurred while retrieving project data.</h3>
           <details style={{ whiteSpace: "pre-wrap" }}>
-            <summary>Error Details</summary>
+            <summary>Technical Details</summary>
             <p>{error.toString()}</p>
           </details>
         </div>
@@ -56,7 +55,6 @@ class ProjectCard extends Component {
         {imageComp}
         <ul className="project-tech-list">{techComp}</ul>
         <p className="project-blurb">{project.blurb}</p>
-        <p className={projectStatus + " project-status"}>{projectStatus.charAt(0).toUpperCase() + projectStatus.slice(1)}</p>
       </div>
     )
   }

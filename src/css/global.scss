@@ -33,7 +33,7 @@ body {
 
 .jump-to-top {
   margin-top: 5vh;
-  color: $color_link;
+  color: $accent_green;
 }
 
 a {
@@ -41,7 +41,7 @@ a {
   color: $accent_green;
   &:hover {
     text-decoration: underline;
-    color: $color_hover;
+    color: $accent_green;
   }
 }
 

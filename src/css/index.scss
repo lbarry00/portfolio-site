@@ -1,4 +1,7 @@
 @import "colors.scss";
 @import "global.scss";
-@import "projects.scss";
-@import "navbar.scss";
+
+@import "pages/projects.scss";
+@import "pages/home.scss";
+
+@import "components/navbar.scss";

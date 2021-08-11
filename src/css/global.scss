@@ -13,10 +13,11 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 0;
   margin: 5vh;
+  margin-bottom: 0;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 #page-content {
@@ -24,11 +25,11 @@ body {
 }
 
 .panel {
-  padding: 20px 50px;
   background-color: $background_darkergrey;
   border-radius: 50px;
-  box-shadow: 2vh 2vh black;
   margin-bottom: 1vh;
+  box-shadow: 2vh 2vh 1vh black;
+  border: 3px solid black;
 }
 
 .jump-to-top {

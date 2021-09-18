@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import AirtableProjectsList from "./AirtableProjectsList";
+import DynamicProjectList from "./DynamicProjectList";
 
 class ProjectsPage extends Component {
     render() {
         return(
-            <AirtableProjectsList />
+            <DynamicProjectList />
         )
     }
 }

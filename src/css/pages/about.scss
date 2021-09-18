@@ -1,0 +1,91 @@
+#about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    #about-me {
+        margin-top: 0;
+    }
+
+    .about-blurb {
+        max-width: 70vw;
+        line-height: 2em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+}
+
+#skills-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10vw;
+
+    .skills-subsection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+
+            padding: 0;
+            max-width: 20vw;
+            li {
+                list-style: none;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30vh;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        height: auto;
+        width: auto;
+        max-width: 30%;
+    }
+}

@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 var Airtable = require("airtable");
 
-class AirtableProjectsList extends Component {
+class DynamicProjectList extends Component {
   constructor(props) {
     super(props);
 
@@ -54,25 +54,25 @@ class AirtableProjectsList extends Component {
           {projComponent}
         </div>
       )
-    } else {
-      // create a ProjectCard for each project
-      projComponent = projectsList.map((project) =>
-          <ProjectCard project={project} key={project.name}/>
-        );
-
-      return(
-        <div id="projects-page">
-          <div class="sticky-title">
-                <h2>Projects</h2>
-            </div>
-          <div className="projects-list">
-            {projComponent}
-          </div>
-        </div>
-        
-      );
     }
+    
+    // create a ProjectCard for each project
+    projComponent = projectsList.map((project) =>
+        <ProjectCard project={project} key={project.name}/>
+      );
+
+    return(
+      <div id="projects-page">
+        <div class="sticky-title">
+              <h2>Projects</h2>
+          </div>
+        <div className="projects-list">
+          {projComponent}
+        </div>
+      </div>
+      
+    );
   }
 }
 
-export default AirtableProjectsList;
+export default DynamicProjectList; 

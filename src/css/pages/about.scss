@@ -1,24 +1,11 @@
 #about-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     h2 {
-        margin: 0;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-    }
-
-    #about-me {
-        margin-top: 0;
-    }
-
-    .about-blurb {
-        max-width: 70vw;
-        line-height: 2em;
-        font-size: 1.5em;
-        text-align: center;
+        margin-bottom: 8vh;
     }
 
     h3 {
@@ -28,8 +15,71 @@
     h4 {
         font-size: 1em;
     }
+
+    p {
+        font-size: 2.3vh;
+    }
+
+    img {
+        max-width: 30%;
+        align-self: center;
+        margin-right: 10vh;
+    }
+
+    #about-sections-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 0vh 5vw;
+    }
+
+    // get rid of side-by-side on mobile
+    @media screen and (max-width: 800px) {
+        #about-sections-container {
+          flex-direction: column;
+        }
+
+        img {
+            max-width: 70%;
+            margin-right: 0;
+        }
+    }
+
+    .about-section {
+        margin: 5vh;
+        margin-top: 0;
+    }
+
+    .about-section-title {
+        line-height: 2em;
+        font-size: 3vh;
+        align-self: center;
+    }
+
+    .about-sub-section {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+
+        ul {
+            padding-left: 2vh;
+
+            li {
+                padding: 0.75vh 0;
+                font-size: 2.3vh;
+            }
+        }
+    }
+
+    hr {
+        width: 50%;
+        margin: 8vh;
+    }
 }
 
+/*
 #skills-list {
     display: flex;
     flex-direction: row;
@@ -61,31 +111,4 @@
         }
     }
 }
-
-.about-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 30vh;
-}
-
-.about-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    .about-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    img {
-        height: auto;
-        width: auto;
-        max-width: 30%;
-    }
-}
+*/

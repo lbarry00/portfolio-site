@@ -19,15 +19,20 @@ class Main extends Component {
                         <nav>
                             <ul>
                                 <li><NavLink exact to="/">HOME</NavLink></li>
-                                <li><NavLink to="/about">ABOUT</NavLink></li>
+                                <li>
+                                    <a target="_blank" href=
+                                    "https://docs.google.com/document/d/11G1d9bD6sqwyv7LiQaNWtwmc01wNm1bpDjVTZphGSPg/edit?usp=sharing"
+                                    >RESUME</a>
+                                </li>
                                 <li><NavLink to="/projects">PROJECTS</NavLink></li>
+                                <li><NavLink to="/about">ABOUT</NavLink></li>
                             </ul>
                         </nav>
                     </div>
                     <div id="page-content">
                         <Route exact path="/" component={HomePage} />
-                        <Route path="/about" component={AboutPage} />
                         <Route path="/projects" component={ProjectsPage} />
+                        <Route path="/about" component={AboutPage} />
                     </div>
                 </div>
             </HashRouter>

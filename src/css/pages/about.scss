@@ -34,6 +34,12 @@
         padding: 0vh 5vw;
     }
 
+    hr {
+        width: 50%;
+        margin: 8vh;
+        align-self: center;
+    }
+
     // get rid of side-by-side on mobile
     @media screen and (max-width: 800px) {
         #about-sections-container {
@@ -43,6 +49,10 @@
         img {
             max-width: 70%;
             margin-right: 0;
+        }
+
+        hr {
+            margin: 2vh;
         }
     }
 
@@ -71,11 +81,6 @@
                 font-size: 2.3vh;
             }
         }
-    }
-
-    hr {
-        width: 50%;
-        margin: 8vh;
     }
 }
 

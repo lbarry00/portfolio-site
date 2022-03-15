@@ -18,19 +18,103 @@
             cursor: pointer;
         }
     }
+}
 
-    ul {
+#nav-items-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding-right: 5vw;
+}
+
+.nav-item {
+    list-style: none;
+    padding-left: 5vw;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+#hamburger-toggle, label {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    // make the page contents look centered on small screens
+    .vertical-split {
+        flex-direction: column-reverse;
+    }
+    img {
+        max-width: 70%;
+    }
+    #home-text {
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+    }
+    body {
+        margin-top: 0;
+    }
+
+    // make navbar 
+    #titlebar {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-        padding-right: 5vw;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        padding: 5vh 0;
+        background-color: $background_darkergrey;
 
-        li {
-            list-style: none;
-            padding-left: 5vw;
-            font-weight: bold;
-            font-size: 2vh;
+        h1 {
+            font-size: 4vh;
         }
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // hide the checkbox
+    #hamburger-toggle {
+        display: none;
+    }
+
+    // actual hamburger menu
+    label {
+        display: block;
+        align-self: flex-end;
+        font-size: 4vh;
+        padding-right: 3vh;
+
+        &:before {
+            content: "\2630";
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // toggle showing the navbar via checkbox state
+    #hamburger-toggle:checked ~ #nav-items-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        .nav-item {
+            padding: 2vh;
+            font-size: 3vh;
+        }
+    }
+    #hamburger-toggle:checked ~ label {
+        &:before { 
+            content: "\00D7";
+        }
+    }
+
+    // hide the navbar by default unless the checkbox is checked
+    #nav-items-list {
+        display: none;
     }
 }

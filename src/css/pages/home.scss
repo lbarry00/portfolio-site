@@ -38,19 +38,3 @@ img {
     max-width: 35%;
     align-self: center;
 }
-
-@media screen and (max-width: 800px) { 
-    .vertical-split {
-        flex-direction: column-reverse;
-    }
-
-    img {
-        max-width: 70%;
-    }
-
-    #home-text {
-        align-items: center;
-        text-align: center;
-        padding-right: 0;
-    }
-}

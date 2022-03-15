@@ -63,7 +63,7 @@ class DynamicProjectList extends Component {
 
     return(
       <div id="projects-page">
-        <div class="sticky-title">
+        <div className="sticky-title">
               <h2>Projects</h2>
           </div>
         <div className="projects-list">

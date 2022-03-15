@@ -72,8 +72,10 @@ class AboutPage extends Component {
                 </div>
                 
                 <hr />
-                <p className="about-section-title">My Skills and Experience</p>
-                <p>This section is currently being built. For the time being, please refer to my <a href="https://docs.google.com/document/d/11G1d9bD6sqwyv7LiQaNWtwmc01wNm1bpDjVTZphGSPg/edit?usp=sharing">resume</a>!</p>
+                <div className="about-section about-sub-section">
+                    <p className="about-section-title">My Skills and Experience</p>
+                    <p>This section is currently being built. For the time being, please refer to my <a href="https://docs.google.com/document/d/11G1d9bD6sqwyv7LiQaNWtwmc01wNm1bpDjVTZphGSPg/edit?usp=sharing">resume</a>!</p>
+                </div>
             </div>
         )
     }

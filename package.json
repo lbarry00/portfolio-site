@@ -12,7 +12,7 @@
     "react-dom": "^16.12.0",
     "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^5.0.0"
   },
   "scripts": {
     "start": "pm2 start server.js",
@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^6.0.1",
-    "sass-loader": "^8.0.2"
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.6.0"
   }
 }

@@ -1,46 +1,4 @@
-#titlebar {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    white-space: nowrap;
-
-    h1 {
-        margin: 0;
-        padding: 0;
-        padding-left: 5vw;
-        text-align: center;
-        color: $foreground_lightgrey;
-        font-size: 3vh;
-
-        a {
-            color: $foreground_lightgrey;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
-}
-
-#nav-items-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    padding-right: 5vw;
-}
-
-.nav-item {
-    list-style: none;
-    padding-left: 5vw;
-    font-weight: bold;
-    font-size: 2vh;
-}
-
-#hamburger-toggle, label {
-    display: none;
-}
-
-@media screen and (max-width: 800px) {
-    // make the page contents look centered on small screens
+@mixin hamburger {
     .vertical-split {
         flex-direction: column-reverse;
     }
@@ -59,17 +17,20 @@
     // make navbar 
     #titlebar {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
         
         padding: 5vh 0;
         background-color: $background_darkergrey;
 
         h1 {
             font-size: 4vh;
+            padding-right: 2vh;
+            padding-bottom: 3vh;
         }
     }
+
     nav {
         display: flex;
         flex-direction: column;
@@ -116,5 +77,77 @@
     // hide the navbar by default unless the checkbox is checked
     #nav-items-list {
         display: none;
+    }
+}
+
+#titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    white-space: nowrap;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        padding-left: 5vw;
+        text-align: center;
+        color: $foreground_lightgrey;
+        font-size: 3vh;
+        overflow-wrap: break-word;
+
+        a {
+            color: $foreground_lightgrey;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+#nav-items-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding-right: 5vw;
+}
+
+.nav-item {
+    list-style: none;
+    padding-left: 5vw;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+#hamburger-toggle, label {
+    display: none;
+}
+
+// make the page contents look centered on smaller screens
+@media screen and (max-width: 800px) and (min-width: 470px) {
+    @include hamburger;
+
+
+    // make navbar 
+    #titlebar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+// even smaller
+@media screen and (max-width: 470px) {
+    @include hamburger;
+
+    // make navbar 
+    #titlebar {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        h1 {
+            padding-right: 2vh;
+            padding-bottom: 3vh;
+        }
     }
 }

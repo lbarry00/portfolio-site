@@ -21,11 +21,10 @@ https
     console.log("Server is running at port " + port);
   });
 
-
-// redirect from old domain 
+// Handle redirect from old domain to new
 app.use((req, res, next) => {
-  if (req.hostname === "laurenbarry.me") {
-    res.redirect("https://lbarry.dev")
+  if (req.hostname.includes("laurenbarry.me")) {
+    res.redirect("https://lbarry.dev" + "/#" + req.url)
   } else {
     next()
   }

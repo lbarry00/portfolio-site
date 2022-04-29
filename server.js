@@ -22,6 +22,14 @@ https
   });
 
 
+// redirect from old domain 
+app.use((req, res, next) => {
+  if (req.hostname === "laurenbarry.me") {
+    res.redirect("https://lbarry.dev")
+  } else {
+    next()
+  }
+})
 
 // Setup endpoints for portfolio site and project demo sub-pages
 // ----- Portfolio homepage

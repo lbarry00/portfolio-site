@@ -15,10 +15,11 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "prod": "pm2 start server.js",
+    "start": "react-scripts start",
     "react-dev": "react-scripts start",
     "server-dev": "nodemon -r dotenv/config server.js",
     "build": "react-scripts build",
+    "prod": "pm2 start server.js",
     "test": "react-scripts test"
   },
   "eslintConfig": {

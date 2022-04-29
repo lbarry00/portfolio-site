@@ -1,10 +1,36 @@
 const express = require('express');
+const https = require("https");
+const fs = require("fs");
 const path = require('path');
+
 const app = express();
 
 console.log("Starting up express server...")
 
-// setup static paths
+var port = process.env.PORT || 443;
+
+https
+  .createServer(
+      {
+        key: fs.readFileSync("key.pem"),
+        cert: fs.readFileSync("cert.pem"),
+      },
+      app
+  )
+  .listen(port, () => {
+    console.log("Server is running at port " + port);
+  });
+
+
+
+// Setup endpoints for portfolio site and project demo sub-pages
+// ----- Portfolio homepage
+// NOTE other paths (/projects and /about) are handled via React-Router so not needed here
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+// ----- Project demo endpoints
 app.use(express.static(path.join(__dirname, "build")));
 app.use(express.static(path.join(__dirname, "build", "starbird"), {
     extensions: ['html', 'htm']
@@ -15,11 +41,6 @@ app.use(express.static(path.join(__dirname, "build", "pokeweb"), {
 app.use(express.static(path.join(__dirname, "build", "bombflip"), {
     extensions: ['html', 'htm']
 }));
-
-// ----- Portfolio homepage
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
 
 // ----- BombFlip game demo endpoints
 app.get("/bombflip", function(req, res) {
@@ -32,7 +53,8 @@ app.get("/bombflip/tutorial", function(req, res) {
   res.sendFile(path.join(__dirname, "build", "bombflip", "tutorial.html"));
 });
 
-// ----- Pokeweb site demo endpoint (only need the one since it's a single-page react app)
+// ----- Pokeweb site demo endpoint
+// NOTE only need the one since it's a single-page react app)
 app.get("/pokeweb", function(req, res) {
   res.sendFile(path.join(__dirname, "build", "pokeweb", "pokeweb.html"));
 });
@@ -47,6 +69,3 @@ app.get("/starbird/resources", function(req, res) {
 app.get("/starbird", function(req, res) {
   res.sendFile(path.join(__dirname, "build", "starbird", "starbird.html"));
 });
-
-// start listening
-app.listen(process.env.PORT || 80), () => console.log("Server started listening on port " + port + ".");

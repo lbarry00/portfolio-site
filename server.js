@@ -1,34 +1,44 @@
 const express = require('express');
 const https = require("https");
+const http = require('http');
 const fs = require("fs");
 const path = require('path');
 
-const app = express();
-
 console.log("Starting up express server...")
 
-var port = process.env.PORT || 443;
+const app = express();
+
+const httpsPort = process.env.PORT || 443;
+const httpPort = process.env.HTTP_PORT || 80;
+var certFiles = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem"),
+}
 
 https
-  .createServer(
-      {
-        key: fs.readFileSync("key.pem"),
-        cert: fs.readFileSync("cert.pem"),
-      },
-      app
-  )
-  .listen(port, () => {
-    console.log("Server is running at port " + port);
+  .createServer(certFiles, app)
+  .listen(httpsPort, () => {
+      console.log("Server is running at port " + httpsPort);
   });
 
-// Handle redirect from old domain to new
+http
+  .createServer(app)
+  .listen(httpPort, () => {
+    console.log("Server is running on port " + httpPort);
+  });
+
+// Handle HTTP redirects: redirect all HTTP to HTTPs, redirect old domain to new
 app.use((req, res, next) => {
-  if (req.hostname.includes("laurenbarry.me")) {
-    res.redirect("https://lbarry.dev" + "/#" + req.url)
+  if (req.secure) {
+    if (req.hostname.includes("laurenbarry.me")) {
+      res.redirect("https://lbarry.dev" + "/#" + req.url)
+    } else {
+      next()
+    }
   } else {
-    next()
+    res.redirect('https://' + req.hostname + "/#" + req.url);
   }
-})
+});
 
 // Setup endpoints for portfolio site and project demo sub-pages
 // ----- Portfolio homepage

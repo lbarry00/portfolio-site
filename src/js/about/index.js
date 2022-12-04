@@ -57,7 +57,7 @@ class AboutPage extends Component {
                             <p className="about-section-title">Hello, my name is Lauren.</p>
                             <p>I like making software that helps people. I love everything tech including web development, desktop apps, cloud computing, and computer hardware.</p>
                             <p>I graduated from <a href="https://www.whitworth.edu/cms/academics/undergraduate-majors-and-programs/computer-science-ba-bs/">Whitworth University</a> in May 2020, and
-                            I'm currently an associate tools engineer at <a href="https://www.bungie.net/">Bungie</a>.</p>
+                            I'm currently a tools engineer at <a href="https://www.bungie.net/">Bungie</a>.</p>
                         </div>
                         <div className="about-sub-section">
                             <p className="about-section-title">On a personal note...</p>

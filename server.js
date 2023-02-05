@@ -18,25 +18,21 @@ var certFiles = {
 https
   .createServer(certFiles, app)
   .listen(httpsPort, () => {
-      console.log("Server is running at port " + httpsPort);
+      console.log("HTTPS is running at port " + httpsPort);
   });
 
 http
   .createServer(app)
   .listen(httpPort, () => {
-    console.log("Server is running on port " + httpPort);
+    console.log("HTTP is running on port " + httpPort);
   });
 
 // Handle HTTP redirects: redirect all HTTP to HTTPs, redirect old domain to new
 app.use((req, res, next) => {
-  if (req.secure) {
-    if (req.hostname.includes("laurenbarry.me")) {
-      res.redirect("https://lbarry.dev" + "/#" + req.url)
-    } else {
-      next()
-    }
-  } else {
+  if (!req.secure) {
     res.redirect('https://' + req.hostname + "/#" + req.url);
+  } else {
+    next();
   }
 });
 

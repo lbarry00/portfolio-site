@@ -20,7 +20,7 @@ class Main extends Component {
             <HashRouter>
                 <div>
                     <div id="titlebar">
-                        <h1><a href="/">LAUREN BARRY</a></h1>
+                        <h1><a href="/">LEO BARRY</a></h1>
                         <nav>
                             <input type="checkbox" id="hamburger-toggle"/>
                             <label htmlFor="hamburger-toggle"></label>

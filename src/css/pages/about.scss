@@ -5,7 +5,7 @@
     align-items: center;
 
     h2 {
-        margin-bottom: 8vh;
+        margin: 0vh 0vh;
     }
 
     h3 {
@@ -42,6 +42,10 @@
 
     // get rid of side-by-side on mobile
     @media screen and (max-width: 800px) {
+        h2 {
+            margin-bottom: 5vh;
+        }
+
         #about-sections-container {
           flex-direction: column;
         }
@@ -62,6 +66,7 @@
     }
 
     .about-section-title {
+        margin: 2vh 0vh;
         line-height: 2em;
         font-size: 3vh;
         align-self: center;

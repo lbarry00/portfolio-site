@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import {
-  Route,
-  NavLink,
-  HashRouter
+    HashRouter,
+    NavLink,
+    Route
 } from "react-router-dom";
 
-import HomePage from "./home/index";
 import AboutPage from "./about/index";
+import HomePage from "./home/index";
 import ProjectsPage from "./projects/index";
 
 class Main extends Component {
@@ -35,7 +35,10 @@ class Main extends Component {
                                             RESUME
                                     </a>
                                 </li>
+                                {/*
+                                TODO: commenting out projects in navbar until I can refactor the airtable API access
                                 <li className="nav-item"><NavLink to="/projects" onClick={() => this.onLinkClick()}>PROJECTS</NavLink></li>
+                                */}
                                 <li className="nav-item"><NavLink to="/about" onClick={() => this.onLinkClick()}>ABOUT</NavLink></li>
                             </ul>
                         </nav>

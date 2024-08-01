@@ -64,6 +64,7 @@ class AboutPage extends Component {
                                 <li>I've played piano for {yearsSinceStartingPiano} years and I also play guitar.</li>
                                 <li>I'm a huge Seattle Seahawks and Kraken fan.</li>
                                 <li>Some of my favorite video games include: Destiny 2, Minecraft, Assassin's Creed, Dark Souls, and Civilization 5</li>
+                                <li>我会说一点中文（还在努力学习），而且我对硬笔书法感兴趣。<br/>I'm currently studying Mandarin Chinese and I'm interested in practicing pen calligraphy.</li>
                             </ul>
                         </div>
                     </div>

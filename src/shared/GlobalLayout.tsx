@@ -18,6 +18,8 @@ function GlobalLayout() {
     }
   };
 
+  const navBarTextColor = theme === "dark" ? "text-primary" : "text-base-content";
+
   return (
     <div className="min-h-screen flex flex-col text-base-content transition-colors duration-400 ease-in-out">
       <div className="drawer flex-1 ">
@@ -28,7 +30,8 @@ function GlobalLayout() {
         />
         <div className="drawer-content flex flex-col flex-1 ">
           {/* Navbar */}
-          <div className="navbar w-screen bg-base-100 text-base-content p-4 font-bold shadow-md lg:h-auto min-h-30">
+          <div
+            className={`navbar bg-base-300 ${navBarTextColor} p-4 font-semibold shadow-md lg:h-auto lg:min-h-0 min-h-30`}>
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="nav-drawer"
@@ -38,7 +41,7 @@ function GlobalLayout() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="inline-block h-6 w-6 stroke-current">
+                  className="inline-block h-24 w-24 stroke-current">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -55,7 +58,7 @@ function GlobalLayout() {
               </Link>
             </div>
             <div className="hidden flex-none lg:block">
-              <ul className="menu menu-horizontal">
+              <ul className="menu menu-horizontal text-sm gap-4">
                 <li>
                   <Link to="/">HOME</Link>
                 </li>
@@ -63,13 +66,14 @@ function GlobalLayout() {
                   <Link to="/about">ABOUT</Link>
                 </li>
                 <li>
+                  {/* TODO: Add resume link */}
                   <a href="">RESUME</a>
                 </li>
                 <li>
                   <Link to="/contact">CONTACT</Link>
                 </li>
                 <li>
-                  <label className="swap swap-rotate">
+                  <label className="swap swap-rotate text-base-content">
                     <input
                       type="checkbox"
                       onChange={handleToggleTheme}
@@ -91,7 +95,7 @@ function GlobalLayout() {
             htmlFor="nav-drawer"
             aria-label="close sidebar"
             className="drawer-overlay"></label>
-          <ul className="menu bg-base-100 min-h-full w-80 p-4 gap-6 text-3xl">
+          <ul className={`menu bg-base-300 ${navBarTextColor} min-h-full w-100 p-4 gap-6 text-3xl font-semibold`}>
             {/* Sidebar content here */}
             <li>
               <Link to="/">HOME</Link>
@@ -100,13 +104,14 @@ function GlobalLayout() {
               <Link to="/about">ABOUT</Link>
             </li>
             <li>
+              {/* TODO: Add resume link */}
               <a href="">RESUME</a>
             </li>
             <li>
               <Link to="/contact">CONTACT</Link>
             </li>
             <li className="my-6">
-              <label className="flex cursor-pointer gap-2">
+              <label className="flex cursor-pointer gap-2 text-base-content">
                 <SunIcon />
                 <input
                   type="checkbox"

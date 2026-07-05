@@ -19,8 +19,8 @@ function GlobalLayout() {
   };
 
   return (
-    <div className="flex flex-col bg-base-100 text-base-content transition-colors duration-300 ease-in-out">
-      <header className="navbar w-screen bg-base-100 text-base-content transition-colors duration-300 ease-in-out p-4 font-bold shadow-md">
+    <div className="min-h-screen flex flex-col text-base-content transition-colors duration-400 ease-in-out">
+      <header className="navbar w-screen bg-base-100 text-base-content p-4 font-bold shadow-md">
         <div className="flex-1">
           <Link
             to="/"
@@ -54,7 +54,7 @@ function GlobalLayout() {
           </ul>
         </div>
       </header>
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-auto flex">
         <Outlet />
       </main>
     </div>

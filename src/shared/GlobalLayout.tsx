@@ -31,7 +31,7 @@ function GlobalLayout() {
         <div className="drawer-content flex flex-col flex-1 ">
           {/* Navbar */}
           <div
-            className={`navbar bg-base-300 ${navBarTextColor} p-4 font-semibold shadow-md lg:h-auto lg:min-h-0 min-h-30`}>
+            className={`navbar bg-base-100 ${navBarTextColor} p-4 font-semibold shadow-md lg:h-auto lg:min-h-0 min-h-30`}>
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="nav-drawer"

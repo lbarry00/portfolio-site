@@ -1,9 +1,9 @@
 function Index() {
   return (
-    <div className="flex-1 bg-base-200 flex flex-col lg:flex-row justify-center items-center gap-10 m-10">
+    <div className="flex-1 flex flex-col lg:flex-row justify-center items-center gap-20 m-10">
       <img
         src="./img/tianmen.jpg"
-        className="lg:max-w-lg max-w-2/3 rounded-lg shadow-lg shadow-black"
+        className="lg:max-w-lg max-w-2/3 rounded-lg shadow-lg shadow-black/50"
       />
       <div className="lg:text-left text-center">
         <h1 className="text-8xl font-bold">Hello! 👋</h1>

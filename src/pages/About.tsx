@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { EmailIcon, GitHubIcon, InstagramIcon, LinkedInIcon } from "../assets/icons";
 
 type GalleryPhoto = {
   id: string;
@@ -14,7 +15,7 @@ function About() {
     {
       id: "xian",
       src: "./img/xian.jpg",
-      alt: "Looking up from below the outside of the Xi'An drum tower",
+      alt: "Looking up from below at the outside of Drum Tower in Xi'An.",
       spanExtraColumn: true
     },
     {
@@ -33,7 +34,7 @@ function About() {
     {
       id: "shanghai",
       src: "./img/shanghai.jpg",
-      alt: "The Shanghai skyline at night. Taken from a Huangpu river ferry.",
+      alt: "The Shanghai skyline at night, taken from aboard a Huangpu river ferry.",
       spanExtraColumn: true
     }
   ];
@@ -92,17 +93,50 @@ function About() {
               In my free time, I'm usually playing piano or guitar, studying Mandarin Chinese, or working through my
               super long backlog of video games. I'm also a huge Seattle Seahawks fan!
             </p>
+            <div className="mt-4 flex flex-col items-start gap-4 justify-start">
+              <p>Some places you can find me:</p>
+              <div className="flex gap-4">
+                <a
+                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  href="mailto:leo@lbarry.dev"
+                  target="_blank">
+                  <EmailIcon />
+                  Email
+                </a>
+                <a
+                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  href="https://www.linkedin.com/in/leo-barry/"
+                  target="_blank">
+                  <LinkedInIcon />
+                  LinkedIn
+                </a>
+                <a
+                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  href="https://github.com/lbarry00/"
+                  target="_blank">
+                  <GitHubIcon />
+                  GitHub
+                </a>
+                <a
+                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  href="https://www.instagram.com/leobarry00/"
+                  target="_blank">
+                  <InstagramIcon />
+                  Instagram
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row justify-center items-start lg:mx-56 mx-36 gap-x-16">
-          <div className="lg:my-0 my-2">
+          <div className="lg:my-0 my-2 flex flex-col gap-4">
             <h1 className="text-2xl font-bold lg:text-left text-center">What I'm Building</h1>
-            <p className="py-2 pt-6 lg:text-left text-center">
+            <p className=" lg:text-left text-center">
               I love building software that helps people and doesn't compromise on performance or usability.
             </p>
-            <p className="py-2 pt-6 lg:text-left text-center">
+            <p className="lg:text-left text-center">
               These are just a couple of the projects that keep me busy outside of work.
             </p>
           </div>
@@ -155,6 +189,7 @@ function About() {
                   className={`rounded-box overflow-hidden ${photo.spanExtraColumn ? "col-span-2" : ""}`}>
                   <img
                     src={photo.src}
+                    alt={photo.alt}
                     className="max-h-64 w-full object-cover transition duration-300 hover:cursor-pointer hover:scale-110"
                     onClick={() => setSelectedPhoto(photo)}
                   />
@@ -169,6 +204,7 @@ function About() {
                 <img
                   key={selectedPhoto?.id}
                   src={selectedPhoto?.src}
+                  alt={selectedPhoto?.alt}
                   className="rounded-box max-w-[90vw] max-h-[85vh] object-contain"
                 />
                 <p className="m-2 text-sm">Press ESC or click anywhere outside to close. </p>

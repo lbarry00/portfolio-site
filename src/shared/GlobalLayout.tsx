@@ -70,9 +70,6 @@ function GlobalLayout() {
                   <a href="">RESUME</a>
                 </li>
                 <li>
-                  <Link to="/contact">CONTACT</Link>
-                </li>
-                <li>
                   <label className="swap swap-rotate text-base-content">
                     <input
                       type="checkbox"

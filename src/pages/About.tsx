@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import { EmailIcon, GitHubIcon, InstagramIcon, LinkedInIcon } from "../assets/icons";
+import greatWall from "../assets/img/great-wall.jpg";
+import harbin from "../assets/img/harbin.jpg";
+import shanghai from "../assets/img/shanghai.jpg";
+import taipei from "../assets/img/taipei.jpg";
+import taipei101 from "../assets/img/taipei101.jpg";
+import troll from "../assets/img/troll.jpg";
+import website from "../assets/img/website.png";
+import xian from "../assets/img/xian.jpg";
 
 type GalleryPhoto = {
   id: string;
@@ -14,26 +22,31 @@ function About() {
   const photos: GalleryPhoto[] = [
     {
       id: "xian",
-      src: "./img/xian.jpg",
+      src: xian,
       alt: "Looking up from below at the outside of Drum Tower in Xi'An.",
       spanExtraColumn: true
     },
     {
       id: "harbin",
-      src: "./img/harbin.jpg",
+      src: harbin,
       alt: "Leo standing with arms spread wide in front of a large illuminated ice sculpture. The ice sculpture is shaped like Saint Sophia's Church in Harbin.",
       spanExtraColumn: false
     },
-    { id: "taipei101", src: "./img/taipei101.jpg", alt: "Taipei 101 at sunset.", spanExtraColumn: false },
+    {
+      id: "taipei101",
+      src: taipei101,
+      alt: "Taipei 101 at sunset.",
+      spanExtraColumn: false
+    },
     {
       id: "great-wall",
-      src: "./img/great-wall.jpg",
+      src: greatWall,
       alt: "Looking through two parapets of the Great Wall of China. Another part of the wall can be seen in the distance.",
       spanExtraColumn: true
     },
     {
       id: "shanghai",
-      src: "./img/shanghai.jpg",
+      src: shanghai,
       alt: "The Shanghai skyline at night, taken from aboard a Huangpu river ferry.",
       spanExtraColumn: true
     }
@@ -51,7 +64,7 @@ function About() {
       <div
         className="hero h-[50vh] lg:mb-0 sm:mb-12"
         style={{
-          backgroundImage: "url(./img/troll.jpg)"
+          backgroundImage: `url(${troll}`
         }}>
         <div className="hero-overlay max-h-lg"></div>
         <div className="hero-content w-full h-full justify-end items-center">
@@ -75,7 +88,7 @@ function About() {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row lg:mx-56 mx-36 gap-x-16">
           <img
-            src="./img/taipei.jpg"
+            src={taipei}
             alt="Leo looking at the camera slightly smiling with his hand resting on a railing. Behind him is the city of Taipei."
             className="max-w-sm rounded-box shadow-sm"
           />
@@ -144,7 +157,7 @@ function About() {
             <div className="card bg-base-100 w-72 shadow-sm">
               <figure className="h-40">
                 <img
-                  src="./img/website.png"
+                  src={website}
                   alt="A screenshot of the home page of this website"
                   className="h-full w-full object-cover"
                 />

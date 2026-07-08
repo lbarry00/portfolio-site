@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import suki from "../assets/img/suki.jpg";
 
 function NotFound() {
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row lg:gap-16 gap-8">
         <img
-          src="./img/suki.jpg"
+          src={suki}
           className="max-w-md rounded-lg shadow-2xl"
         />
         <div className="flex flex-col gap-10">

@@ -1,8 +1,10 @@
+import tianmen from "../assets/img/tianmen.jpg";
+
 function Index() {
   return (
     <div className="flex-1 flex flex-col lg:flex-row justify-center items-center gap-20 m-10">
       <img
-        src="./img/tianmen.jpg"
+        src={tianmen}
         className="lg:max-w-lg max-w-2/3 rounded-lg shadow-lg shadow-black/50"
       />
       <div className="lg:text-left text-center">

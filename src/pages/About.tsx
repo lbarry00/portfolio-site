@@ -8,6 +8,7 @@ import taipei101 from "../assets/img/taipei101.jpg";
 import troll from "../assets/img/troll.jpg";
 import website from "../assets/img/website.png";
 import xian from "../assets/img/xian.jpg";
+import { EMPLOYMENT_STATUS } from "../shared/constants";
 
 type GalleryPhoto = {
   id: string;
@@ -95,16 +96,17 @@ function About() {
           <div className="lg:my-0 my-2">
             <h1 className="text-2xl font-bold lg:text-left text-center">About Me</h1>
             <p className="py-2 pt-6 lg:text-left text-center">
-              I'm a software engineer based in Seattle, WA. I'm passionate about solving complex problems and utilizing
-              technology to help others.
+              I'm a software engineer based in Seattle, WA. I like solving complex problems and am passionate about
+              utilizing technology to help others.
             </p>
 
             <p className="py-2 lg:text-left text-center">
               I graduated from Whitworth University with a BSc. in Computer Science in 2020.
             </p>
+            <p className="py-2 lg:text-left text-center">{EMPLOYMENT_STATUS}</p>
             <p className="py-2 lg:text-left text-center">
-              In my free time, I'm usually playing piano or guitar, studying Mandarin Chinese, or working through my
-              super long backlog of video games. I'm also a huge Seattle Seahawks fan!
+              In my free time, I'm usually playing piano/guitar, studying Mandarin Chinese, or working through my super
+              long backlog of video games. I'm also a huge Seattle Seahawks and Kraken fan!
             </p>
             <div className="mt-4 mx-auto lg:mx-0 flex w-fit flex-col items-center justify-center gap-4">
               <p className="font-semibold self-center">Some places you can find me:</p>

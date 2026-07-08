@@ -1,6 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { MoonIcon, SunIcon } from "../assets/icons";
+import { RESUME_LINK } from "./constants";
 
 function GlobalLayout() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
@@ -66,8 +67,11 @@ function GlobalLayout() {
                   <Link to="/about">ABOUT</Link>
                 </li>
                 <li>
-                  {/* TODO: Add resume link */}
-                  <a href="">RESUME</a>
+                  <a
+                    href={RESUME_LINK}
+                    target="_blank">
+                    RESUME
+                  </a>
                 </li>
                 <li>
                   <label className="swap swap-rotate text-base-content">
@@ -101,11 +105,11 @@ function GlobalLayout() {
               <Link to="/about">ABOUT</Link>
             </li>
             <li>
-              {/* TODO: Add resume link */}
-              <a href="">RESUME</a>
-            </li>
-            <li>
-              <Link to="/contact">CONTACT</Link>
+              <a
+                href={RESUME_LINK}
+                target="_blank">
+                RESUME
+              </a>
             </li>
             <li className="my-6">
               <label className="flex cursor-pointer gap-2 text-base-content">

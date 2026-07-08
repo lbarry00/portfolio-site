@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from "../assets/icons";
 import { RESUME_LINK } from "./constants";
 
 function GlobalLayout() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "customdark");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -13,13 +13,13 @@ function GlobalLayout() {
 
   const handleToggleTheme = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
-      setTheme("dark");
+      setTheme("customdark");
     } else {
-      setTheme("light");
+      setTheme("customlight");
     }
   };
 
-  const navBarTextColor = theme === "dark" ? "text-primary" : "text-base-content";
+  const navBarTextColor = theme === "customdark" ? "text-primary" : "text-base-content";
 
   return (
     <div className="min-h-screen flex flex-col text-base-content transition-colors duration-400 ease-in-out">
@@ -78,7 +78,7 @@ function GlobalLayout() {
                     <input
                       type="checkbox"
                       onChange={handleToggleTheme}
-                      checked={theme === "dark"}
+                      checked={theme === "customdark"}
                     />
                     <SunIcon />
                     <MoonIcon />
@@ -118,7 +118,7 @@ function GlobalLayout() {
                   type="checkbox"
                   className="toggle toggle-xl"
                   onChange={handleToggleTheme}
-                  checked={theme === "dark"}
+                  checked={theme === "customdark"}
                 />
                 <MoonIcon />
               </label>

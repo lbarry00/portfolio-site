@@ -93,32 +93,32 @@ function About() {
               In my free time, I'm usually playing piano or guitar, studying Mandarin Chinese, or working through my
               super long backlog of video games. I'm also a huge Seattle Seahawks fan!
             </p>
-            <div className="mt-4 flex flex-col items-start gap-4 justify-start">
-              <p>Some places you can find me:</p>
+            <div className="mt-4 mx-auto lg:mx-0 flex w-fit flex-col items-center justify-center gap-4">
+              <p className="font-semibold self-center">Some places you can find me:</p>
               <div className="flex gap-4">
                 <a
-                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  className="btn btn-primary btn-outline"
                   href="mailto:leo@lbarry.dev"
                   target="_blank">
                   <EmailIcon />
                   Email
                 </a>
                 <a
-                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  className="btn btn-primary btn-outline"
                   href="https://www.linkedin.com/in/leo-barry/"
                   target="_blank">
                   <LinkedInIcon />
                   LinkedIn
                 </a>
                 <a
-                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  className="btn btn-primary btn-outline"
                   href="https://github.com/lbarry00/"
                   target="_blank">
                   <GitHubIcon />
                   GitHub
                 </a>
                 <a
-                  className="btn btn-primary btn-outline mx-auto lg:mx-0 flex w-fit"
+                  className="btn btn-primary btn-outline"
                   href="https://www.instagram.com/leobarry00/"
                   target="_blank">
                   <InstagramIcon />

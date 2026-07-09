@@ -73,7 +73,7 @@ function About() {
             className="rounded-box bg-neutral/20 backdrop-blur-xs
              p-10 text-right text-neutral-content shadow-2xl">
             <h1 className="py-4 text-7xl font-bold">Hi, I'm Leo.</h1>
-            <span className="text-rotate lg:text-lg text-2xl">
+            <span className="text-rotate lg:text-xl text-3xl">
               <span className="text-right justify-items-end">
                 <span>Software Engineer</span>
                 <span>Musician</span>
@@ -87,53 +87,52 @@ function About() {
         </div>
       </div>
       <div className="hero">
-        <div className="hero-content flex-col lg:flex-row lg:mx-56 mx-36 gap-x-16">
+        <div className="hero-content flex-col lg:flex-row lg:mx-56 mx-16 gap-x-16">
           <img
             src={taipei}
             alt="Leo looking at the camera slightly smiling with his hand resting on a railing. Behind him is the city of Taipei."
-            className="max-w-sm rounded-box shadow-sm"
+            className="lg:max-w-sm max-w-xl rounded-box shadow-sm"
           />
           <div className="lg:my-0 my-2">
-            <h1 className="text-2xl font-bold lg:text-left text-center">About Me</h1>
-            <p className="py-2 pt-6 lg:text-left text-center">
+            <h1 className="lg:text-xl text-4xl font-bold lg:text-left text-center">About Me</h1>
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               I'm a software engineer based in Seattle, WA. I like solving complex problems and am passionate about
               utilizing technology to help others.
             </p>
-
-            <p className="py-2 lg:text-left text-center">
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               I graduated from Whitworth University with a BSc. in Computer Science in 2020.
             </p>
-            <p className="py-2 lg:text-left text-center">{EMPLOYMENT_STATUS}</p>
-            <p className="py-2 lg:text-left text-center">
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">{EMPLOYMENT_STATUS}</p>
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               In my free time, I'm usually playing piano/guitar, studying Mandarin Chinese, or working through my super
               long backlog of video games. I'm also a huge Seattle Seahawks and Kraken fan!
             </p>
-            <div className="mt-4 mx-auto lg:mx-0 flex w-fit flex-col items-center justify-center gap-4">
-              <p className="font-semibold self-center">Some places you can find me:</p>
+            <div className="mt-4 place-self-center flex w-fit flex-col items-center justify-center gap-4">
+              <p className="lg:text-lg text-3xl font-semibold self-cex1nter">Some places you can find me:</p>
               <div className="flex gap-4">
                 <a
-                  className="btn btn-primary btn-outline"
+                  className="btn btn-xl lg:btn-md btn-primary btn-outline"
                   href="mailto:leo@lbarry.dev"
                   target="_blank">
                   <EmailIcon />
                   Email
                 </a>
                 <a
-                  className="btn btn-primary btn-outline"
+                  className="btn btn-xl lg:btn-md btn-primary btn-outline"
                   href="https://www.linkedin.com/in/leo-barry/"
                   target="_blank">
                   <LinkedInIcon />
                   LinkedIn
                 </a>
                 <a
-                  className="btn btn-primary btn-outline"
+                  className="btn btn-xl lg:btn-md btn-primary btn-outline"
                   href="https://github.com/lbarry00/"
                   target="_blank">
                   <GitHubIcon />
                   GitHub
                 </a>
                 <a
-                  className="btn btn-primary btn-outline"
+                  className="btn btn-xl lg:btn-md btn-primary btn-outline"
                   href="https://www.instagram.com/leobarry00/"
                   target="_blank">
                   <InstagramIcon />
@@ -145,19 +144,19 @@ function About() {
         </div>
       </div>
       <div className="hero">
-        <div className="hero-content flex-col lg:flex-row justify-center items-start lg:mx-56 mx-36 gap-x-16">
+        <div className="hero-content flex-col lg:flex-row lg:mx-56 mx-16 gap-x-16">
           <div className="lg:my-0 my-2 flex flex-col gap-4">
-            <h1 className="text-2xl font-bold lg:text-left text-center">What I'm Building</h1>
-            <p className=" lg:text-left text-center">
+            <h1 className="lg:text-xl text-4xl font-bold lg:text-left text-center">What I'm Building</h1>
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               I love building software that helps people and doesn't compromise on performance or usability.
             </p>
-            <p className="lg:text-left text-center">
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               These are just a couple of the projects that keep me busy outside of work.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-stretch gap-6">
-            <div className="card bg-base-100 w-72 shadow-sm">
-              <figure className="h-40">
+            <div className="card bg-base-100 w-full shadow-sm">
+              <figure className="lg:h-40 h-72">
                 <img
                   src={website}
                   alt="A screenshot of the home page of this website"
@@ -165,39 +164,37 @@ function About() {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Portfolio Website</h2>
-                <p>Built with TypeScript, React, Tailwind, and daisyUI.</p>
+                <h2 className="card-title lg:text-lg text-2xl">Portfolio Website</h2>
+                <p className="lg:text-sm text-xl">Built with TypeScript, React, Tailwind, and daisyUI.</p>
               </div>
             </div>
 
-            <div className="card bg-base-100 w-72 shadow-sm">
-              <div className="h-40 flex items-center justify-center bg-base-300 rounded-box rounded-b-none">
+            <div className="card bg-base-100 w-full shadow-sm">
+              <div className="lg:h-40 h-72 flex items-center justify-center bg-base-300 rounded-box rounded-b-none">
                 <span className="text-5xl">🚧</span>
               </div>
               <div className="card-body">
-                <h2 className="card-title">Web App for Chinese Teachers</h2>
-                <p>
-                  A fullstack solution that combines my passion for improving workflows and my interest in learning
-                  Chinese.
+                <h2 className="card-title lg:text-lg text-2xl">Web App for Chinese Teachers</h2>
+                <p className="lg:text-sm text-xl">
+                  A new project that combines my passion for improving workflows and my interest in learning Chinese.
                 </p>
-                <p>More info coming soon!</p>
+                <p className="lg:text-sm text-xl italic">More info coming soon!</p>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="hero">
-        <div className="hero-content flex-col justify-center items-start lg:mx-56 mx-36 gap-x-16">
+        <div className="hero-content flex-col lg:mx-56 mx-16 gap-x-16">
           <div className="lg:my-0 my-2">
-            <h1 className="text-2xl font-bold lg:text-left text-center">Travels</h1>
-            <p className="py-2 pt-6 lg:text-left text-center">
+            <h1 className="lg:text-xl text-4xl font-bold lg:text-left text-center">Travels</h1>
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               I want to see the world and learn about other cultures. Here are some cool pictures from my trips so far,
               hopefully more to come!
             </p>
-            <p className="py-2 lg:text-left text-center italic text-sm">(Click to enlarge.)</p>
           </div>
           <div className="lg:my-0 my-8 flex self-center lg:flex-row flex-col justify-center items-center gap-4">
-            <div className="grid grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-4 gap-4">
               {photos.map((photo) => (
                 <div
                   key={photo.id}
@@ -222,7 +219,10 @@ function About() {
                   alt={selectedPhoto?.alt}
                   className="rounded-box max-w-[90vw] max-h-[85vh] object-contain"
                 />
-                <p className="m-2 text-sm">Press ESC or click anywhere outside to close. </p>
+
+                <p className="m-2 lg:text-sm text-lg lg:text-left text-center italic">
+                  Press ESC or click anywhere outside to close.{" "}
+                </p>
               </div>
               <form
                 method="dialog"
@@ -231,20 +231,21 @@ function About() {
               </form>
             </dialog>
           </div>
+          <p className="lg:text-sm text-lg pt-0 text-center italic">(Click to enlarge.)</p>
         </div>
       </div>
       <div className="hero">
-        <div className="hero-content flex-row-reverse lg:mx-56 mx-24 gap-x-16 items-start">
+        <div className="hero-content lg:flex-row-reverse flex-col-reverse  lg:mx-56 mx-24 gap-x-16 items-start">
           <iframe
             src="https://www.youtube-nocookie.com/embed/CO39m5KJtqA?controls=1"
-            className="aspect-video w-1/2 rounded-box"
+            className="aspect-video lg:w-1/2 w-full rounded-box self-center"
             allowFullScreen
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             referrerPolicy="strict-origin"
           />
           <div className="lg:my-0 my-2">
-            <h1 className="text-2xl font-bold lg:text-left text-center">Language Learning</h1>
-            <p className="py-2 pt-6 lg:text-left text-center">
+            <h1 className="lg:text-xl text-4xl font-bold lg:text-left text-center">Language Learning</h1>
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               Although I've been studying Mandarin Chinese for many years, I still feel like{" "}
               <span
                 className="tooltip text-secondary font-bold"
@@ -252,7 +253,7 @@ function About() {
                 学习中文真是学无止境！
               </span>
             </p>
-            <p className="py-2 lg:text-left text-center">
+            <p className="lg:text-base text-2xl py-2 pt-6 lg:text-left text-center">
               I even appeared on an all-Chinese podcast where I talk about my language learning journey, travels, and
               more. Check it out!
             </p>

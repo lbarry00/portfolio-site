@@ -39,3 +39,7 @@ if (useSecure) {
 }
 
 app.use(express.static(join(__dirname, "dist")));
+
+app.get("/{*splat}", (req, res) => {
+  res.sendFile(join(__dirname, "dist/index.html"));
+});

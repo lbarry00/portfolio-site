@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 
 const httpPort = process.env.HTTP_PORT || 80;
 const httpsPort = process.env.HTTPS_PORT || 443;
-const useSecure = process.env.USE_HTTPS === "true";
+const useSecure = process.env.USE_HTTPS !== "false";
 
 const app = express();
 
@@ -20,8 +20,8 @@ createHttpServer(app).listen(httpPort, () => {
 
 if (useSecure) {
   const certFiles = {
-    key: readFileSync("key.pem"),
-    cert: readFileSync("cert.pem")
+    key: readFileSync("/etc/letsencrypt/live/lbarry.dev/privkey.pem"),
+    cert: readFileSync("/etc/letsencrypt/live/lbarry.dev/cert.pem")
   };
 
   createHttpsServer(certFiles, app).listen(httpsPort, () => {

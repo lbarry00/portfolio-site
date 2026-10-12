@@ -100,7 +100,7 @@ function GlobalLayout() {
               </ul>
             </div>
           </div>
-          <main className="flex-1 overflow-auto flex bg-base-200">
+          <main className="flex flex-col flex-1 min-w-0 w-full bg-base-200">
             <Outlet />
           </main>
         </div>

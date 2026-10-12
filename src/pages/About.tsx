@@ -61,7 +61,7 @@ function About() {
   }, [selectedPhoto]);
 
   return (
-    <div className="flex-1 flex flex-col justify-start items-center gap-8 mb-16">
+    <div className="min-w-0 w-full flex flex-col justify-start items-center gap-8 mb-16">
       <div
         className="hero h-[50vh] lg:mb-0 sm:mb-12"
         style={{
@@ -87,7 +87,7 @@ function About() {
         </div>
       </div>
       <div className="hero">
-        <div className="hero-content flex-col lg:flex-row lg:mx-56 mx-16 gap-x-16">
+        <div className="hero-content min-w-0 flex-col lg:flex-row lg:mx-56 mx-16 gap-x-16">
           <img
             src={taipei}
             alt="Leo looking at the camera slightly smiling with his hand resting on a railing. Behind him is the city of Taipei."
@@ -107,8 +107,8 @@ function About() {
               In my free time, I'm usually playing piano/guitar, studying Mandarin Chinese, or working through my super
               long backlog of video games. I'm also a huge Seattle Seahawks and Kraken fan!
             </p>
-            <div className="mt-4 place-self-center flex w-fit flex-col items-center justify-center gap-4">
-              <p className="lg:text-lg text-3xl font-semibold self-cex1nter">Some places you can find me:</p>
+            <div className="mt-4 mx-auto flex w-fit flex-col items-center justify-center gap-4">
+              <p className="lg:text-lg text-3xl font-semibold">Some places you can find me:</p>
               <div className="flex gap-4">
                 <a
                   className="btn btn-xl lg:btn-md btn-primary btn-outline"
